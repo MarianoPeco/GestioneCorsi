@@ -29,7 +29,7 @@ public class CorsiService {
     }
 
     public List<Corsi> getAllCoursesOrderedBy(String orderBy) {
-        Sort sort = Sort.by(orderBy);  // You can also specify direction e.g. Sort.by(Sort.Order.asc(orderBy));
+        Sort sort = Sort.by(orderBy);
         return corsiRepository.findAll(sort);
     }
     public Corsi createCourseWithTeacher(Corsi course, Long teacherId) {
